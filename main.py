@@ -12,6 +12,7 @@ MHGU_Proof_Of_A_Hero = "Music\Monster Hunter Hunting Music Collection XX - 15 - 
 MH_World_Proof_Of_A_Hero = "Music\Monster Hunter World OST Proof of a Hero (Extended)"
 IMAGE = "commander4.jpg"
 
+
 # TODO Finish the UI for the Fourth Generation and previous Generations
 # TODO Get the image to show up on the grid
 # TODO Merge branches when complete to get rid of the Fourth Generation on.
@@ -23,8 +24,8 @@ class Dragonator:
 		pygame.mixer.init()
 		self.main_window = Tk()
 		self.main_window.title("The Dragonator v1.1")
-		self.main_window.geometry("510x400")
-		self.main_window.resizable(0, 0)
+		self.main_window.geometry("620x210")
+		#self.main_window.resizable(0, 0)
 		self.firstThroughThirdGen = Frame(self.main_window, bg="gray")
 		self.fourthGen = Frame(self.main_window)
 
@@ -43,15 +44,16 @@ class Dragonator:
 			exit()
 		else:
 			self.welcomeLabel.config(text="Pick a generation")
-			self.meme_label.grid(row=4)
+			self.meme_label.grid(row=0, column=1, padx=3)
 
 			self.first_generation_button = Button(self.firstThroughThirdGen, text="First Generation", command=lambda: self.play(1))
 			self.second_generation_button = Button(self.firstThroughThirdGen, text="Second Generation", command=lambda:self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
 			self.third_generation_button = Button(self.firstThroughThirdGen, text="Third Generation", command=lambda: self.play(3))
-			self.first_generation_button.grid(row=3, column=5, rowspan=2)
-			self.second_generation_button.grid(row=3, column=6, rowspan=2)
-			self.third_generation_button.grid(row=3, column=7, rowspan=2)
-			
+			self.fourth_generation_button = Button(self.firstThroughThirdGen, text="Fourth Generation", command=lambda: self.fourthGen.tkraise())
+			self.first_generation_button.grid(row=0, column=3, padx=2)
+			self.second_generation_button.grid(row=0, column=4, padx=2)
+			self.third_generation_button.grid(row=0, column= 6)
+			#self.fourth_generation_button.grid(row=1, column=2)
 
 			self.main_window.mainloop()
 
