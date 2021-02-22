@@ -14,4 +14,4 @@ If you want to hunt together add me on discord. I only play GU, and World at the
 
 Disclaimer
 
-I own absolute nothing all of the music belongs to Capcom. 
+I own absolute nothing all of the music belongs to Capcom. I do not own the images and memes. 
