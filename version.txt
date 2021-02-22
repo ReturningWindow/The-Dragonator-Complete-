@@ -1,0 +1,12 @@
+Version 1.0
+
+Added the first, second, and third generation buttons for playing proof of a hero
+
+Version 1.1
+
+Added the first, second, third, and four generation with a new UI. The main problem for the program was solved during this version.
+
+Version 1.2
+
+Fifth Generation section completed. The application is totally functional.
+
