@@ -17,11 +17,17 @@ FourImageOutOf2 = "Images/MHGU_with_valstrax2.jpg"
 FifthImageOutOf1 = "Images/Nergignate2.jpg"
 FifthImageOutOf2 = "Images/Magnamalo.jpg"
 
+# Preparing the Icon Image
+def fix_icon():
+	felyne = Image.open("Images/icon.png")
+	return ImageTk.PhotoImage(felyne)
+
 class Dragonator:
 	def __init__(self):
 		pygame.mixer.init()
 		self.main_window = Tk()
-		self.main_window.title("The Dragonator v1.2")
+		self.main_window.title("The Dragonator v1.3")
+		self.main_window.iconphoto(False, fix_icon())
 		self.main_window.geometry("620x210")
 		self.main_window.resizable(0, 0)
 		self.firstThroughThirdGen = Frame(self.main_window, bg="gray")
@@ -107,5 +113,8 @@ class Dragonator:
 		elif(button == 5 and extraGameId == 2):
 			pygame.mixer.music.load(MH_Rise_Proof_Of_A_Hero)
 		pygame.mixer.music.play()
+
+
+	
 
 The_CommandersDragonator = Dragonator()
