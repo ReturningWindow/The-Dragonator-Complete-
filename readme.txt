@@ -12,6 +12,8 @@ Enjoy the program and happy hunting.
 
 If you want to hunt together add me on discord. I only play GU, and World at the moment. I'll be playing rise when it comes out. I need three other partners.
 
+Also, the Dragonator.exe loads up pretty slowly. I will try and increase the speedin the future but hopefully it loads up pretty quickly for you.
+
 Disclaimer
 
 I own absolute nothing all of the music belongs to Capcom. I do not own the images and memes. 
