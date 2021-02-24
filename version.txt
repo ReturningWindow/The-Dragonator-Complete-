@@ -14,3 +14,7 @@ Version 1.3
 
 - Added Felyne/Palico image as icon for the application
 - Reduced the length both DOS and Rise to exclude the extra bits.
+
+Version 1.3.1
+- Fixed MH Rise proof of a hero not playing
+- Renamed main.py to the "The Dragonator"
