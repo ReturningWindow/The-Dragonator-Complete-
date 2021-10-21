@@ -26,20 +26,20 @@ class Dragonator:
 
 
 		self.first_through_third_gen.tkraise()
-		self.meme_image = ImageTk.PhotoImage(Image.open(data.FRONT_IMAGE))
-		self.one_fourth_gen_image = ImageTk.PhotoImage(Image.open(data.FOURTH_GEN_FLAGSHIP2))
-		self.two_fourth_gen_image = ImageTk.PhotoImage(Image.open(data.GENERATIONS_FLAGSHIP))
-		self.one_fifth_gen_image = ImageTk.PhotoImage(Image.open(data.WORLD_FLAGSHIP))
-		self.two_fifth_gen_image = ImageTk.PhotoImage(Image.open(data.RISE_FLAGSHIP))
-		self.meme_label = Label(self.first_through_third_gen, image= self.meme_image)
-		self.insect_glavie_with_gore = Label(self.fourth_gen, image=self.one_fourth_gen_image)
-		self.hunters_with_valstrax = Label(self.fourth_gen, image=self.two_fourth_gen_image)
-		self.nergignate_with_hunters = Label(self.fifth_gen, image=self.one_fifth_gen_image)
-		self.magnamalo_image = Label(self.fifth_gen, image=self.two_fifth_gen_image)
+		self.commander_image = ImageTk.PhotoImage(Image.open(data.FRONT_IMAGE))
+		self.gore_magala_image = ImageTk.PhotoImage(Image.open(data.FOURTH_GEN_FLAGSHIP2))
+		self.valstrax_image = ImageTk.PhotoImage(Image.open(data.GENERATIONS_FLAGSHIP))
+		self.nergignate_image = ImageTk.PhotoImage(Image.open(data.WORLD_FLAGSHIP))
+		self.magnamalo_image = ImageTk.PhotoImage(Image.open(data.RISE_FLAGSHIP))
+		self.front_image = Label(self.first_through_third_gen, image= self.commander_image)
+		self.gore = Label(self.fourth_gen, image=self.gore_magala_image)
+		self.val = Label(self.fourth_gen, image=self.valstrax_image)
+		self.nergignate = Label(self.fifth_gen, image=self.nergignate_image)
+		self.magna = Label(self.fifth_gen, image=self.magnamalo_image)
 		self.welcome_label = Label(self.first_through_third_gen, text="Welcome Hunter", bg="red")
-		self.fourth_gen = Label(self.fourth_gen, text="Fourth Generation")
-		self.fifth_gen = Label(self.fifth_gen, text="Fifth Generation")
 		self.welcome_label.grid(row=0, column=0)
+		self.fourth_label = Label(self.fourth_gen, text="Fourth Generation")
+		self.fifth_label = Label(self.fifth_gen, text="Fifth Generation")
 		self.welcome_question = tkinter.messagebox.askquestion("Question", "Do you know where my dragonator is located?")
 
 
@@ -50,12 +50,12 @@ class Dragonator:
 		else:
 			# **** First Generation to Third Geneartion Frame 
 			self.welcome_label.config(text="Pick a generation")
-			self.meme_label.grid(row=0, column=1, padx=3)
+			self.front_image.grid(row=0, column=1, padx=3)
 			self.first_generation_button = Button(self.first_through_third_gen, text="First Generation", command=lambda: self.play(1))
 			self.second_generation_button = Button(self.first_through_third_gen, text="Second Generation", command=lambda:self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
 			self.third_generation_button = Button(self.first_through_third_gen, text="Third Generation", command=lambda: self.play(3))
-			self.fourth_generation_button = Button(self.first_through_third_gen, text="Fourth Generation", command=lambda: self.fourthGen.tkraise())
-			self.fifth_generation_button = Button(self.first_through_third_gen, text="Fifth Generation", command=lambda: self.fifthGen.tkraise())
+			self.fourth_generation_button = Button(self.first_through_third_gen, text="Fourth Generation", command=lambda: self.fourth_gen.tkraise())
+			self.fifth_generation_button = Button(self.first_through_third_gen, text="Fifth Generation", command=lambda: self.fifth_gen.tkraise())
 			self.first_generation_button.grid(row=0, column=3, padx=2)
 			self.second_generation_button.grid(row=0, column=4, padx=2)
 			self.third_generation_button.grid(row=0, column= 6)
@@ -64,24 +64,24 @@ class Dragonator:
 
 			# **** Fourth Generation Frame ****
 			self.fourth_label.pack()
-			self.insect_glavie_with_gore.pack(side=LEFT)
-			self.hunters_with_valstrax.pack(side=LEFT)
-			self.MH4U_Button = Button(self.fourth_gen, text="MH4U", command=lambda:self.play(4, 1))
-			self.MHGU_Button = Button(self.fourth_gen, text="MHGU", command=lambda:self.play(4, 2))
+			self.gore.pack(side=LEFT)
+			self.val.pack(side=LEFT)
+			self.mh4u_button = Button(self.fourth_gen, text="MH4U", command=lambda:self.play(4, 1))
+			self.mhgu_button = Button(self.fourth_gen, text="MHGU", command=lambda:self.play(4, 2))
 			self.back_button1 = Button(self.fourth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
-			self.MH4U_Button.pack()
-			self.MHGU_Button.pack()
+			self.mh4u_button.pack()
+			self.mhgu_button.pack()
 			self.back_button1.pack(fill=BOTH)
 
 			# **** Fifth Generation Frame ****
-			self.fifthLabel.pack()
-			self.nergignate_with_hunters.pack(side=LEFT)
-			self.magnamalo_image.pack(side=LEFT)
-			self.MH_World_Button = Button(self.fifth_gen, text="Monster Hunter World", command=lambda:self.play(5, 1))
-			self.MH_Rise_Button = Button(self.fifth_gen, text="Monster Hunter Rise", command=lambda:self.play(5, 2))
+			self.fifth_label.pack()
+			self.nergignate.pack(side=LEFT)
+			self.magna.pack(side=LEFT)
+			self.mh_world_button = Button(self.fifth_gen, text="Monster Hunter World", command=lambda:self.play(5, 1))
+			self.mh_rise_button = Button(self.fifth_gen, text="Monster Hunter Rise", command=lambda:self.play(5, 2))
 			self.back_button2 = Button(self.fifth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
-			self.MH_World_Button.pack()
-			self.MH_Rise_Button.pack()
+			self.mh_world_button.pack()
+			self.mh_rise_button.pack()
 			self.back_button2.pack(fill=BOTH)
 
 			self.main_window.mainloop()
@@ -89,18 +89,18 @@ class Dragonator:
 
 	def play(self, button, extra_game_id=0):
 		if(button == 1):
-			pygame.mixer.music.load(MH_1_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_ONE_PROOF_OF_A_HERO)
 		elif(button == 2):
-			pygame.mixer.music.load(MH_DOS_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_DOS_PROOF_OF_A_HERO)
 		elif(button == 3):
-			pygame.mixer.music.load(MH_TRI_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_TRI_PROOF_OF_HERO)
 		elif(button == 4 and extra_game_id == 1):
-			pygame.mixer.music.load(MH_4_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_FOUR_PROOF_OF_HERO)
 		elif(button == 4 and extra_game_id == 2):
-			pygame.mixer.music.load(MHGU_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MHGU_PROOF_OF_HERO)
 		elif(button == 5 and extra_game_id == 1):
-			pygame.mixer.music.load(MH_World_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_WORLD_PROOF_OF_HERO)
 		elif(button == 5 and extra_game_id == 2):
-			pygame.mixer.music.load(MH_Rise_Proof_Of_A_Hero)
+			pygame.mixer.music.load(data.MH_RISE_PROOF_OF_HERO)
 		pygame.mixer.music.play()
 
