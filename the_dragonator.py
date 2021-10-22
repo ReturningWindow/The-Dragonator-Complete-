@@ -41,53 +41,46 @@ class Dragonator:
 		self.welcome_label.grid(row=0, column=0)
 		self.fourth_label = tkinter.Label(self.fourth_gen, text="Fourth Generation")
 		self.fifth_label = tkinter.Label(self.fifth_gen, text="Fifth Generation")
-		self.welcome_question = tkinter.messagebox.askquestion("Question", "Do you know where my dragonator is located?")
-
-
-		if self.welcome_question == "no":
-			tkinter.messagebox.showinfo("Okay", "Oh, well uh... look at the time. I'm heading out. Goodbye!")
-			time.sleep(2.5)
-			exit()
-		else:
-			# **** First Generation to Third Geneartion Frame 
-			self.welcome_label.config(text="Pick a generation")
-			self.front_image.grid(row=0, column=1, padx=3)
-			self.first_generation_button = tkinter.Button(self.first_through_third_gen, text="First Generation", command= lambda: self.play(1))
-			self.second_generation_button = tkinter.Button(self.first_through_third_gen, text="Second Generation", command= lambda: self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
-			self.third_generation_button = tkinter.Button(self.first_through_third_gen, text="Third Generation", command= lambda: self.play(3))
-			self.random_pick_button = tkinter.Button(self.first_through_third_gen, text="Wildcard", command= lambda: self.play_random_song())
-			self.fourth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fourth Generation", command= lambda: self.fourth_gen.tkraise())
-			self.fifth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fifth Generation", command= lambda: self.fifth_gen.tkraise())
-			self.first_generation_button.grid(row=0, column=3, padx=2)
-			self.second_generation_button.grid(row=0, column=4, padx=2)
-			self.third_generation_button.grid(row=0, column= 6)
-			self.random_pick_button.place(x=530, y=120)
-			self.fourth_generation_button.place(x=320, y=120)
-			self.fifth_generation_button.place(x=430, y=120)
+		
+		self.welcome_label.config(text="Pick a generation")
+		self.front_image.grid(row=0, column=1, padx=3)
+		self.first_generation_button = tkinter.Button(self.first_through_third_gen, text="First Generation", command= lambda: self.play(1))
+		self.second_generation_button = tkinter.Button(self.first_through_third_gen, text="Second Generation", command= lambda: self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
+		self.third_generation_button = tkinter.Button(self.first_through_third_gen, text="Third Generation", command= lambda: self.play(3))
+		self.random_pick_button = tkinter.Button(self.first_through_third_gen, text="Wildcard", command= lambda: self.play_random_song())
+		self.fourth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fourth Generation", command= lambda: self.fourth_gen.tkraise())
+		self.fifth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fifth Generation", command= lambda: self.fifth_gen.tkraise())
+		self.first_generation_button.grid(row=0, column=3, padx=2)
+		self.second_generation_button.grid(row=0, column=4, padx=2)
+		self.third_generation_button.grid(row=0, column= 6)
+		self.random_pick_button.place(x=530, y=120)
+		self.fourth_generation_button.place(x=320, y=120)
+		self.fifth_generation_button.place(x=430, y=120)
 
 			# **** Fourth Generation Frame ****
-			self.fourth_label.pack()
-			self.gore.pack(side=tkinter.LEFT)
-			self.val.pack(side=tkinter.LEFT)
-			self.mh4u_button = tkinter.Button(self.fourth_gen, text="MH4U", command=lambda:self.play(4, 1))
-			self.mhgu_button = tkinter.Button(self.fourth_gen, text="MHGU", command=lambda:self.play(4, 2))
-			self.back_button1 = tkinter.Button(self.fourth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
-			self.mh4u_button.pack()
-			self.mhgu_button.pack()
-			self.back_button1.pack(fill=tkinter.BOTH)
+		self.fourth_label.pack()
+		self.gore.pack(side=tkinter.LEFT)
+		self.val.pack(side=tkinter.LEFT)
+		self.mh4u_button = tkinter.Button(self.fourth_gen, text="MH4U", command=lambda:self.play(4, 1))
+		self.mhgu_button = tkinter.Button(self.fourth_gen, text="MHGU", command=lambda:self.play(4, 2))
+		self.back_button1 = tkinter.Button(self.fourth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
+		self.mh4u_button.pack()
+		self.mhgu_button.pack()
+		self.back_button1.pack(fill=tkinter.BOTH)
 
 			# **** Fifth Generation Frame ****
-			self.fifth_label.pack()
-			self.nergignate.pack(side=tkinter.LEFT)
-			self.magna.pack(side=tkinter.LEFT)
-			self.mh_world_button = tkinter.Button(self.fifth_gen, text="Monster Hunter World", command=lambda:self.play(5, 1))
-			self.mh_rise_button = tkinter.Button(self.fifth_gen, text="Monster Hunter Rise", command=lambda:self.play(5, 2))
-			self.back_button2 = tkinter.Button(self.fifth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
-			self.mh_world_button.pack()
-			self.mh_rise_button.pack()
-			self.back_button2.pack(fill=tkinter.BOTH)
+		self.fifth_label.pack()
+		self.nergignate.pack(side=tkinter.LEFT)
+		self.magna.pack(side=tkinter.LEFT)
+		self.mh_world_button = tkinter.Button(self.fifth_gen, text="Monster Hunter World", command=lambda:self.play(5, 1))
+		self.mh_rise_button = tkinter.Button(self.fifth_gen, text="Monster Hunter Rise", command=lambda:self.play(5, 2))
+		self.back_button2 = tkinter.Button(self.fifth_gen, text="Back", command=lambda:self.first_through_third_gen.tkraise())
+		self.mh_world_button.pack()
+		self.mh_rise_button.pack()
+		self.back_button2.pack(fill=tkinter.BOTH)
 
-			self.main_window.mainloop()
+		self.main_window.mainloop()
+
 
 	def play_random_song(self):
 		a = random.randint(1, 5)
