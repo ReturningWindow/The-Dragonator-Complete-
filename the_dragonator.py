@@ -103,5 +103,5 @@ class Dragonator:
 			pygame.mixer.music.load(data.MH_WORLD_PROOF_OF_HERO)
 		elif(button == 5 and extra_game_id == 2):
 			pygame.mixer.music.load(data.MH_RISE_PROOF_OF_HERO)
-		pygame.mixer.music.play()
+		pygame.mixer.music.play(-1)
 
