@@ -1,7 +1,7 @@
 
 # A file filled with very important locations. 
 # Place here to make the base file to have less lines
-VERSION = "1.3.2"
+VERSION = "2.0"
 PROGRAM_ICON = "images/program_icon.png"
 
 
