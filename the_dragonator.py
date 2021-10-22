@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 import tkinter.messagebox
 import pygame
 import time
+import random
 import data 
 
 
@@ -51,14 +52,16 @@ class Dragonator:
 			# **** First Generation to Third Geneartion Frame 
 			self.welcome_label.config(text="Pick a generation")
 			self.front_image.grid(row=0, column=1, padx=3)
-			self.first_generation_button = tkinter.Button(self.first_through_third_gen, text="First Generation", command=lambda: self.play(1))
-			self.second_generation_button = tkinter.Button(self.first_through_third_gen, text="Second Generation", command=lambda:self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
-			self.third_generation_button = tkinter.Button(self.first_through_third_gen, text="Third Generation", command=lambda: self.play(3))
-			self.fourth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fourth Generation", command=lambda: self.fourth_gen.tkraise())
-			self.fifth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fifth Generation", command=lambda: self.fifth_gen.tkraise())
+			self.first_generation_button = tkinter.Button(self.first_through_third_gen, text="First Generation", command= lambda: self.play(1))
+			self.second_generation_button = tkinter.Button(self.first_through_third_gen, text="Second Generation", command= lambda: self.play(2)) # I think I need to get a new audio file. There are some extra bits that aren't proof of a hero
+			self.third_generation_button = tkinter.Button(self.first_through_third_gen, text="Third Generation", command= lambda: self.play(3))
+			self.random_pick_button = tkinter.Button(self.first_through_third_gen, text="Wildcard", command= lambda: self.play_random_song())
+			self.fourth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fourth Generation", command= lambda: self.fourth_gen.tkraise())
+			self.fifth_generation_button = tkinter.Button(self.first_through_third_gen, text="Fifth Generation", command= lambda: self.fifth_gen.tkraise())
 			self.first_generation_button.grid(row=0, column=3, padx=2)
 			self.second_generation_button.grid(row=0, column=4, padx=2)
 			self.third_generation_button.grid(row=0, column= 6)
+			self.random_pick_button.place(x=530, y=120)
 			self.fourth_generation_button.place(x=320, y=120)
 			self.fifth_generation_button.place(x=430, y=120)
 
@@ -85,6 +88,11 @@ class Dragonator:
 			self.back_button2.pack(fill=tkinter.BOTH)
 
 			self.main_window.mainloop()
+
+	def play_random_song(self):
+		a = random.randint(1, 5)
+		b = random.randint(1, 2) if a > 3 else 0
+		self.play(a, b)
 
 
 	def play(self, button, extra_game_id=0):
