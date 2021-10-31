@@ -1,18 +1,10 @@
-This program play entire goal is to play proof of a hero for every single generation of hunting.
+This program play entire goal is to play "Proof of a Hero" for every single generation of Monster Hunter.
 
-If any of the music is wrong for these buttons. Contact me at this link and comment about it.
+If there are any bugs in the final release please put them in the issues.
 
-https://trello.com/b/F5jSSUC7/the-dragonator
+Unlike my comments from before, the Dragonator.exe loads up pretty smoothly. The question that pops up every time the Dragonator.exe loads has been completely deleted and with it you can jump straight into things. The program defaults to playing songs on loop.
 
-The Proof of a Hero for Monster Hunter Rise might be a little late to come out until I find the right version to put in here.
-
-If any bugs appear in the program please report them in the link above again.
-
-Enjoy the program and happy hunting. 
-
-If you want to hunt together add me on discord. I only play GU, and World at the moment. I'll be playing rise when it comes out. I need three other partners.
-
-Also, the Dragonator.exe loads up pretty slowly. I will try and increase the speedin the future but hopefully it loads up pretty quickly for you.
+Enjoy the program and happy hunting.
 
 Disclaimer
 
