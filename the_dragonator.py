@@ -4,7 +4,7 @@ import tkinter.messagebox
 import pygame
 import time
 import random
-import data 
+import data
 
 
 class Dragonator:
@@ -41,7 +41,7 @@ class Dragonator:
 		self.welcome_label.grid(row=0, column=0)
 		self.fourth_label = tkinter.Label(self.fourth_gen, text="Fourth Generation")
 		self.fifth_label = tkinter.Label(self.fifth_gen, text="Fifth Generation")
-		
+
 		self.welcome_label.config(text="Pick a generation")
 		self.front_image.grid(row=0, column=1, padx=3)
 		self.first_generation_button = tkinter.Button(self.first_through_third_gen, text="First Generation", command= lambda: self.play(1))
