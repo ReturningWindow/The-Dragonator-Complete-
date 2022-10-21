@@ -1,8 +1,7 @@
 This program play entire goal is to play "Proof of a Hero" for every single generation of Monster Hunter.
 
-If there are any bugs in the final release please put them in the issues.
-
-Unlike my comments from before, the Dragonator.exe loads up pretty smoothly. The question that pops up every time the Dragonator.exe loads has been completely deleted and with it you can jump straight into things. The program defaults to playing songs on loop.
+Since Sunbreak has come out, I think it is time to complete all of the things listed for this program.
+There will be a huge overhaul to the UI along with new elements added to this program.
 
 Enjoy the program and happy hunting.
 
