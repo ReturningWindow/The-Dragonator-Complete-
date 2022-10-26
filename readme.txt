@@ -10,4 +10,4 @@ Enjoy the program and happy hunting.
 
 Disclaimer
 
-I own absolute nothing all of the music belongs to Capcom. I do not own the images and memes. 
+I own absolute nothing. All of the music belongs to Capcom. I do not own the images and memes either. 
