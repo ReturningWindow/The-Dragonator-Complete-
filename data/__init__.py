@@ -1,19 +1,15 @@
 
-# A file filled with very important locations. 
-# Place here to make the base file to have less lines
+PATH1 = "music"
+PATH2 = "images"
+
 VERSION = "2.0"
-PROGRAM_ICON = "images/program_icon.png"
-
-
-MH_ONE_PROOF_OF_A_HERO = "music/Monster Hunter Proof of a Hero.mp3"
-MH_DOS_PROOF_OF_A_HERO = "music/Monster Hunter Freedom 2 - Proof of a Hero.mp3"
-MH_TRI_PROOF_OF_HERO = "music/Monster Hunter Tri Proof of a Hero.mp3"
-MH_FOUR_PROOF_OF_HERO = "music/Monster Hunter 4 - Proof of a Hero.mp3"
-MHGU_PROOF_OF_HERO = "music/Monster Hunter Hunting Music Collection XX - Proof of a Hero.mp3"
-MH_WORLD_PROOF_OF_HERO = "music/Monster Hunter World Proof of a Hero.mp3"
-MH_RISE_PROOF_OF_HERO = "music/Monster Hunter Rise Proof of a Hero.mp3"
-FRONT_IMAGE = "images/commander.jpg"
-FOURTH_GEN_FLAGSHIP2 = "images/Gore.jpg"
-GENERATIONS_FLAGSHIP = "images/Valstrax.jpg" 
-WORLD_FLAGSHIP = "images/Nergignate.jpg"
-RISE_FLAGSHIP = "images/Magnamalo.jpg"
+ICON = f"{PATH2}/program_icon.png"
+track_names = [
+                "Monster Hunter - Proof of a Hero", "Monster Hunter Freedom 2 - Proof of a Hero",
+                "Monster Hunter Tri - Proof of a Hero", "Monster Hunter 4 - Proof of a Hero", 
+                "Monster Hunter Generations Ultimate - Proof of a Hero", "Monster Hunter World - Proof of a Hero",
+                "Monster Hunter Rise - Proof of a Hero"
+]
+images_names = ["commander", "Gore", "Valstrax", "Nergignate", "Magnamalo"]
+tracks = [f"{PATH1}/{name}.mp3" for name in track_names]
+images = [f"{PATH2}/{name}.jpg" for name in images_names]
