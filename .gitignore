@@ -4,3 +4,6 @@ venv/
 # Other Python Stuff
 __pycache__/
 data/__pycache__/
+my_dragonator.sublime-project
+my_dragonator.sublime-workspace
+Application.log
