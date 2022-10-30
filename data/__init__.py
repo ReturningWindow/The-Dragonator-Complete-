@@ -2,7 +2,7 @@
 PATH1 = "music"
 PATH2 = "images"
 
-VERSION = "2.0"
+VERSION = "0.10alpha"
 ICON = f"{PATH2}/program_icon.png"
 track_names = [
                 "Monster Hunter - Proof of a Hero", "Monster Hunter Freedom 2 - Proof of a Hero",
